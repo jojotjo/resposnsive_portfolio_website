@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Design</title>
+    <!-- css file  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utlits.css">
+    <!-- font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/c3171e834c.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <body onload="checkCookie()"></body>
+    <!-- header section start  -->
+
+    <header>
+        <div class="head-section layout">
+            <div class="nav-bar flex space-between align-center">
+                <div class="logo uppercase f-w-700 letter-spacing2"><span class="sofia">PAUL</span><span class="diana">
+                        JORDAN</span></div>
+                <div class="nav-links" id="nav">
+                    <ul class="flex f-w-600">
+                        <div id="list-example" class="list-group">
+                            <li><a href="mywork.html">Home</a></li>
+                        </div>
+                        <script>
+                            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                                target: '#navbar-example'
+                            })
+                        </script>
+                        <div id="list-example" class="list-group">
+                            <li><a href="#list-item-2">About</a></li>
+                        </div>
+                        <script>
+                            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                                target: '#navbar-example'
+                            })
+                        </script>
+                        <div id="list-example" class="list-group">
+                            <li><a href="list-item-3">Portfolio</a>
+                                <ul class="home">
+                                    <li class="box"><a href="/elephantpage.html">ELEPHANT</a></li>
+                                    <li class="box"><a href="/africa landscape.html">AFRICA</a></li>
+
+                                </ul>
+                            </li>
+                        </div>
+                        <script>
+                            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                                target: '#navbar-example'
+                            })
+                        </script>
+                        <div id="list-example" class="list-group">
+                            <li><a href="list-item-4">Experience</a>
+
+                            </li>
+                        </div>
+                        <script>
+                            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                                target: '#navbar-example'
+                            })
+                        </script>
+                        <div id="list-example" class="list-group">
+                            <li><a href="list-item-5">Contact Us</a>
+                                <ul class="home">
+                                    <li class="box"><a href="contact.html">EMAIL</a></li>
+                                    <li class="box"><a href="signup.html">SIGN UP</a></li>
+                                    <li class="box"><a href="login page .html">LOGIN</a></li>
+
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+
+                <button class="btn hire-me-btn"><span class="hire">Hire Me</span></button>
+                <input type="checkbox" name="checkbox" id="click">
+                <label for="click" class="menu-btn" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+            <!-- content  -->
+            <div class="content flex align-center">
+                <!-- left section  -->
+                <div class="left flex2">
+                    <h4 class="uppercase letter-spacing2"><span class="sofiaing"> I'm </span><span
+                            class="maintext">PAUL</span> </h4>
+                    <h2 class="my-t-10 uppercase letter-spacing2 f-w-700"><span class="sofiaing">PHOTOGRAPHER</span>
+                    </h2>
+                    <p class="my-t-10"><span class="wilding">I am a professional Wildlife and Landscape </span><span
+                            class="lifing">Photographer.</span> </p>
+                    <a href="DOWNLOAD.html"><button class="btn btn2 my-t-20"><span class="wild">Download
+                                CV</span></button></a>
+                </div>
+
+                <!-- right section  
+                <div class="right flex3">
+                    <img src="" alt="girl png">
+                    <div class="color-box"></div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <!-- about section start  -->
+    <section class="about-me-sec">
+        <div class="about-sec layout">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
+                tabindex="0">
+                <h3 class="uppercase pd-t-30 text-center" id="list-item-2">About Me</h3>
+                <hr class="w55 my-t-10">
+
+                <div class="about-content flex justify-center align-center">
+                    <!-- left side  -->
+                    <div class="left flex2">
+                        <h2 class="uppercase letter-spacing2">PHOTOGRAPHER</h2>
+                        <p class="my-t-10" style="color: wheat;">
+                            Hey there! I’m PAUL JORDAN, a wildlife, landscape, and nature photographer extraordinaire.
+                            I take immense pride in capturing the very essence of nature and its amazing creatures. And
+                            you
+                            know what? My journey began way back when I was just a wide-eyed kid. I used to tag along
+                            with
+                            my dad on adventures through our local forests, uncovering the mysteries and marvels of our
+                            furry and feathery friends. That’s when the magic took hold, and my passion for nature and
+                            photography was born.</p>
+
+                        <p style="color: wheat;"> Fast forward to today, and I’ve been fortunate enough to explore the
+                            nooks
+                            and crannies of this
+                            incredible planet. From steamy tropical rainforests to blistering arid deserts, from the
+                            wide-open African savannahs to the icy realms of the Arctic, I’ve been there, camera in
+                            hand,
+                            ready to capture jaw-dropping landscapes and mesmerizing wildlife in their natural habitats.
+                        </p>
+
+                        <ul>
+
+                        </ul>
+
+                        <button class="btn my-t-20">Hire Me</button>
+                    </div>
+                    <!-- right side  -->
+                    <div class="right flex3 " id="photos">
+                        <img class="photo"
+                            src="https://anettemossbacher.com/wp-content/media/Anette-Mossbacher-Wildlife-Landscape-Photographer-Meerkat-768x994.jpg"
+                            alt="">
+                        <hr>
+
+                        <!-- color used  
+                    <div class="dot-color text-center my-t-10">
+                        <h3>color used</h3>
+                        <span class="dot dot-w"> </span>
+                        <span class="dot dot-b"></span>
+                        <span class="dot dot-ws"></span>
+                        <span class="dot dot-bs"></span>
+                        <span class="dot dot-a"></span>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section end  -->
+
+    <!-- portfolio section start  -->
+    <section class="portfolio-sec">
+
+        <div class="portfolio layout">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
+                tabindex="0">
+                <h3 class="uppercase text-center pd-30" id="list-item-3">Portfolio</h3>
+            </div>
+            <div class="portolio-parent flex justify-center align-center text-center">
+                <div class="portfolio-child">
+                    <img src="https://anettemossbacher.com/wp-content/media/african-elephants-bw-bull-fight-namibia-768x512.jpg"
+                        alt="">
+                    <h3>ELEPHANT PORTFOLIO</h3>
+                    <p>Here you can view a collection of my best photos of elephants. The mighty Tusker, the
+                        elephant,
+                        is the largest walking animal on Earth.</p>
+                    <a href="/elephantpage.html"><button class="btn btn2">Explore More</button></a>
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="https://anettemossbacher.com/wp-content/media/blue-zambezi-river-rapids-moving-water-768x432.jpg"
+                        alt="">
+                    <h3>AFRICA PORTFOLIO</h3>
+                    <p>Browse this collection of beautiful images from my African Landscape photography trips, which
+                        bring an exciting world into your home or office.</p>
+                    <a href="/africa landscape.html"><button class="btn btn2">Explore More</button></a>
+                </div>
+
+                <div class="portfolio-child">
+                    <img src="https://anettemossbacher.com/wp-content/media/lioness-close-up-eye-768x512.jpg" alt="">
+                    <h3>LION PORTFOLIO</h3>
+                    <p> Browse my lovely portfolio of lion pictures, including black-maned lions available in black
+                        and
+                        white or color. </p>
+                    <a href="#"><button class="btn btn2">Explore More</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- portfolio section end  -->
+
+    <!-- experience section start  -->
+
+    <section class="experience-sec">
+        <div class="experience layout">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
+                tabindex="0">
+                <h3 class="uppercase pd-30 text-center" id="list-item-4">Experience</h3>
+                <div class="experience-details flex space-between text-center">
+                    <div class="col">
+                        <h3>800+</h3>
+                        <p>happy clients</p>
+                    </div>
+
+                    <div class="col">
+                        <h3>50+</h3>
+                        <p>loactions</p>
+                    </div>
+
+                    <div class="col">
+                        <h3>150+</h3>
+                        <p>projects</p>
+                    </div>
+
+                    <div class="col">
+                        <h3>20+</h3>
+                        <p>experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- experience section end  -->
+
+    <!-- testimonal section start  -->
+    <section class="testimonial-sec">
+        <div class="testimonial layout">
+            <h3 class="uppercase text-center pd-30">Client Testimonial</h3>
+            <div class="testimonial-parent flex space-between align-center">
+                <div class="testimonial-child">
+                    <img src="user001.jpg" alt="">
+                    <p>What an amazing, fun-filled adventure to travel and learn with you, PAUL! With your profound
+                        knowledge and talent in wildlife photography
+                        .</p>
+                    <div class="review-sec flex space-between">
+                        <!-- <div class="icon-sec">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div> -->
+                        <div class="name-sec text-center">
+                            <h4>Danise Janson</h4>
+                            <p class="designation">Music Producer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-child">
+                    <img src="user002.jpg" alt="">
+                    <p>We bought PAUL’s limited edition stunning fine art print of an African Lion in black and white,
+                        several years ago, and have followed her work as a great fan, ever since.
+                    </p>
+                    <div class="review-sec flex space-between">
+                        <div class="icon-sec">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="name-sec text-center">
+                            <h4>Lauren Scott</h4>
+                            <p class="designation">Managing Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-child">
+                    <img src="user003.jpg" alt="">
+                    <p>I received the most beautiful and meaningful photograph captured
+                        by your amazing talent, The Cape of Good Hope. From the moment it
+                        hasn’t stop capturing my attention.</p>
+                    <div class="review-sec flex space-between">
+                        <div class="icon-sec">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="name-sec text-center">
+                            <h4>Nicole Fusaro</h4>
+                            <p class="designation">HR Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonal section end -->
+
+    <!-- contact-us section start  -->
+    <section class="contact-us-sec">
+        <div class="contact-us layout">
+            
+            <h3 class="text-center uppercase pd-30" id="list-item-5">Contact us</h3>
+            <div class="contact-details flex space-between align-center">
+                <div class="left-sec">
+                    <h5>Main Branch</h5>
+                    <p>1938W <br> august blvud chicago <br>Boardman - 841239</p>
+                </div>
+                <div class="center-sec">
+                    <h5>Contact No.</h5>
+                    <p>Mobile No. +1234567890</p>
+                    <h5>Email Id</h5>
+                    <p>pauljordan@gmail.com</p>
+                </div>
+                <div class="right-sec text-center">
+                    <form action="">
+                        Email : <input type="email" id="email-id"> <br>
+                        <button class="btn btn2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+       
+        </div>
+    </section>
+    <!-- contact-us section end  -->
+
+    <!--social media start links-->
+    <div class="singleCol social-media d-flex justify-content-sm-evenly sm">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <!-- Twitter -->
+        <a href=" https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+        <!-- Google -->
+        <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <!-- Linkedin -->
+        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- Pinterest -->
+        <a href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        <!-- Stack overflow -->
+        <a href="https://stackoverflow.com/"><i class="fa-brands fa-stack-overflow"></i></a>
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        <!-- Slack -->
+        <a href="https://slack.com/"><i class="fa-brands fa-slack"></i></a>
+        <!-- Github -->
+        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+        <!-- Reddit -->
+        <a href="https://www.reddit.com/"><i class="fa-brands fa-reddit"></i></a>
+        <!-- Whatsapp -->
+        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <!-- social media end links -->
+
+    <!-- footer section  -->
+    <footer>
+        <div class="footer-sec layout text-center">
+            <p>Copyright &copy; PAUL JORDAN PHOTOGRAPHER| All Right Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
